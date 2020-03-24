@@ -3,6 +3,7 @@ const Mongoose = require('mongoose');
 const articleSchema = new Mongoose.Schema({
     title: { type: String },
     authors: { type: String },
+    authors_array: [{ type: String }],
     abstract: { type: String },
     published_year: { type: Number },
     published_month: { type: Number },
