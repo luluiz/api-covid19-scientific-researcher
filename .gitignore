@@ -1,0 +1,6 @@
+node_modules
+package-lock.json
+uploads
+public/relatorios/relatorio.html
+.env
+.env.production

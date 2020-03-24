@@ -1,0 +1,49 @@
+{
+    "name": "covid19_api",
+    "version": "1.0.0",
+    "description": "COVID19 API",
+    "main": "server/loader_api.js",
+    "scripts": {
+        "preinstall": "npm i -g win-node-env",
+        "api": "NODE_ENV=development nodemon --tls-min-v1.0",
+        "prod": "NODE_ENV=production pm2 start server/loader_api.js --name covid19 --node-args='--tls-min-v1.0'",
+        "scheduler_prod": "NODE_ENV=production pm2 start server/loader_scheduler.js --name tasks",
+        "test": "NODE_ENV=test mocha --timeout 11000"
+    },
+    "author": "Luiz Bezerra",
+    "license": "ISC",
+    "private": true,
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/luluiz/api-covid19-scientific-researcher.git"
+    },
+    "devDependencies": {
+        "chai": "^4.2.0",
+        "chai-http": "^4.3.0",
+        "faker": "^4.1.0",
+        "faker-br": "^0.2.4",
+        "mocha": "^7.1.0",
+        "nodemon": "^1.19.1"
+    },
+    "dependencies": {
+        "bcrypt": "^3.0.6",
+        "body-parser": "^1.19.0",
+        "cron": "^1.7.2",
+        "csvtojson": "^2.0.10",
+        "dotenv": "^8.2.0",
+        "ejs": "^2.6.2",
+        "express": "^4.17.1",
+        "express-jwt": "^5.3.1",
+        "fs-extra": "^8.1.0",
+        "lodash": "^4.17.15",
+        "moment-timezone": "^0.5.26",
+        "mongoose": "^5.6.6",
+        "mongoose-paginate": "^5.0.3",
+        "mongoose-validator": "^2.1.0",
+        "multer": "^1.4.2",
+        "nodemailer": "^6.3.0",
+        "npm": "^6.10.2",
+        "pm2": "^3.5.1",
+        "request": "^2.88.0"
+    }
+}
