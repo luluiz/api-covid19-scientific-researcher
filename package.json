@@ -5,8 +5,8 @@
     "main": "server/loader_api.js",
     "scripts": {
         "preinstall": "npm i -g win-node-env",
-        "api": "NODE_ENV=development nodemon --tls-min-v1.0",
-        "prod": "NODE_ENV=production pm2 start server/loader_api.js --name covid19 --node-args='--tls-min-v1.0'",
+        "api": "NODE_ENV=development nodemon",
+        "prod": "NODE_ENV=production pm2 start server/loader_api.js --name covid19",
         "scheduler_prod": "NODE_ENV=production pm2 start server/loader_scheduler.js --name tasks",
         "test": "NODE_ENV=test mocha --timeout 11000"
     },
